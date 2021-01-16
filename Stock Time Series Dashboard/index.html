@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Financial Plot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css" integrity="sha384-8iuq0iaMHpnH2vSyvZMSIqQuUnQA7QM+f6srIdlgBrTSEyd//AWNMyEaSF2yPzNQ" crossorigin="anonymous">
+    <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="plots.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                Apple Inc. Financial Report
+                <span id="report-date" style="float: right;">2017 - 2018</span>
+            </h1>
+            <p></p>
+        </div>
+        <aside class="filters">
+            <div class="panel-heading">Stock Search</div>
+            <div class="panel-body">
+                <form id="form">
+                    <div class="form-group">
+                        <ul class="list-group" id="filters">
+                            <li class="filter list-group-item">
+                                <label for="stockTick">Enter Ticker</label>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </aside>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services.
+                </div>
+            </div>
+            <div class="company">
+                Apple Inc.
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Stock Performance
+                </div>
+            </div>
+            <div id="plot"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table id="summary-table" class="table table-striped table-inverse">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Open</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Close</th>
+                        <th>Volume</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
